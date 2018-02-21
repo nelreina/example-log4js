@@ -5,6 +5,7 @@
   "author": "Nelson Reina <nelreina@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "log4js": "^2.5.3",
     "nodemon": "^1.15.1"
   },
   "scripts": {
