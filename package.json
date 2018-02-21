@@ -1,0 +1,13 @@
+{
+  "name": "tmp-events",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nelson Reina <nelreina@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^1.15.1"
+  },
+  "scripts": {
+    "dev": "nodemon index.js"
+  }
+}
