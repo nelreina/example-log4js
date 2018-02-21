@@ -1,13 +1,8 @@
 const Events = require('events');
 const timer = require('./timer');
 const Log4js = require('log4js');
-Log4js.configure({
-  appenders: {
-    console: { type: 'console' },
-    file: { type: 'file', filename: 'timer.log' }
-  },
-  categories: { default: { appenders: ['console', 'file'], level: 'debug' } }
-});
+const appenders = require('./appenders.json');
+Log4js.configure(appenders);
 
 (async () => {
   const logger = Log4js.getLogger();
@@ -16,6 +11,6 @@ Log4js.configure({
   logEvent.on('step', data => logger.info(`step ${data}`));
 
   const done = await timer(10, 0.5, logEvent);
-  logger.info(done);
+  logger.error(done);
   logger.debug('Program ended!');
 })();
