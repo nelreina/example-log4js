@@ -1,4 +1,7 @@
-module.exports = (iteration, seconds, evt) =>
+const Events = require('events');
+const Emmiter = new Events();
+
+const timerRun = (iteration, seconds, evt) =>
   new Promise((resolve, reject) => {
     let count = 0;
 
@@ -7,7 +10,13 @@ module.exports = (iteration, seconds, evt) =>
       evt.emit('step', count);
       if (count === iteration) {
         clearInterval(intv);
-        resolve('Timer is done!');
+        resolve('BOOM!!!');
       }
     }, seconds * 1000);
   });
+class Timer extends Events {
+  run(iteration, seconds) {
+    return timerRun(iteration, seconds, this);
+  }
+}
+module.exports = Timer;
