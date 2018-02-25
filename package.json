@@ -1,7 +1,7 @@
 {
   "name": "example-log4js",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/timer.js",
   "author": "Nelson Reina <nelreina@gmail.com>",
   "license": "MIT",
   "dependencies": {
