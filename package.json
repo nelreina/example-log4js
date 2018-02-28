@@ -6,9 +6,10 @@
   "license": "MIT",
   "dependencies": {
     "log4js": "^2.5.3",
+    "minimist": "^1.2.0",
     "nodemon": "^1.15.1"
   },
   "scripts": {
-    "dev": "nodemon --watch src src/index.js"
+    "dev": "nodemon --watch src src/index.js --iteration=5 --seconds=0.5"
   }
 }
